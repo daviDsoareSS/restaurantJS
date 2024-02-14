@@ -2,9 +2,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "DM Sans", sans-serif;
+}
+:root{
+    --colorFont: #3e3e3e;
+    --roseFont: #ec5a5b;
+    --orange: #ffca66;
+    --gray: #fbfbfb;
 }
 body{
-    background-color: #3e3e3e;
+    background-color: var(--gray);
     color: #fff;
 }
 .content{
@@ -15,43 +22,80 @@ body{
 }
 
 header{
-    padding: 50px;
+    z-index: 99;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     font-size: 25px;
-    float: right;
-    padding-right: 250px;
+    padding: 20px 0;
+    background-color: #fff0e9;
 }
-header .cart{
+header .wrapper-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--roseFont);
+}
+header .wrapper-header .left-header{
+    display: flex;
+    align-items: center;
+    gap: 300px;   
+}
+header .wrapper-header .left-header .logo{
+    font-weight: 700;
+    color: #000;
+}
+header .wrapper-header .left-header ul.links{
+    font-size: 15px;
+    color: var(--colorFont);
+    display: flex;
+    flex-basis: 80%;
+    padding-left: 0;
+    list-style: none;
+    gap: 50px;
+    
+}
+header .wrapper-header .right-header{
+    display: flex;
+    align-items: center;
+}
+header .wrapper-header .right-header .cart{
     position: relative;
 }
-header svg{
-    width: 50px;
-    height: 50px;
-    fill: rgba(55, 148, 255, 0.8);
+header .wrapper-header .right-header .cart svg{
+    width: 35px;
+    height: 35px;
+    fill: var(--roseFont);    
 }
-header p{
-    top: -10px;
-    right: -10px;
+header .wrapper-header .right-header .cart p{
     position: absolute;
+    top: -7px;
+    right: -7px;
+    color: #fff;
     background-color: #000;
-    border-radius: 50%;
-    width: 25px;
-    height: 25px;
-    font-size: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
+    width: 20px;
+    height: 20px;
+    font-size: 13px;
+    border-radius: 50%;
+}
+
+header .sidebar.active{
+    display: block;
 }
 header .sidebar{
-    display: flex;
-    justify-content: center;
-    padding: 50px 0;
     position: absolute;
-    top: 0px;
     right: 0;
-    background-color: #fff;
-    width: 200px;
-    height: 100vh;
+    display: none;
+    width: 300px;
+    background-color: var(--orange);
+    height: auto;
+    justify-content: center;
+    padding: 50px;
+    border-radius: 30px;    
 }
 header .sidebar .products-in-cart{
     color: #000;
@@ -74,13 +118,92 @@ header .sidebar .products-in-cart li input{
 }
 header .sidebar .products-in-cart svg{
     cursor: pointer;
-    fill: red;
+    fill: var(--roseFont);
     width: 20px;
     height: 20px;
 }
 main{
-    width: calc(100vw - 200px);
-
+    color: var(--roseFont);
+    background-color: #fff0e9;
+    padding: 20vh 0;
+    height: auto;
+}
+main .wrapper-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+main .wrapper-main .text{
+    width: 550px;
+}
+main .wrapper-main .text h1{
+    font-size: 60px;
+}
+main .wrapper-main .text p{
+    padding: 30px 0;
+    color: var(--colorFont);
+    font-size: 20px;
+}
+main .wrapper-main .text .wrapper-buttons{
+    display: flex;
+    gap: 30px;
+}
+main .wrapper-main .text .wrapper-buttons button{
+    height: 50px;
+    border-radius: 40px;
+    background-color: var(--roseFont);
+    border: none;
+    color: #fff;
+    font-size: 16.67px;
+    font-weight: 700;
+    flex-basis: 30%;
+}
+main .wrapper-main img{
+    width: 600px;
+    height: auto;
+    object-fit: contain;
+}
+main .info-restaurant{
+    width: 90vw;
+    transform: translateX(-50%);
+    position: absolute;
+    left: 50%;
+    bottom: -20vh;
+    display: flex;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 0px 20px -11px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 20px -11px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 20px -11px rgba(0,0,0,0.5);
+    border-radius: 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+}
+main .info-restaurant .info{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+main .info-restaurant .info span{
+    background-color: var(--orange);
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 70px;
+    font-size: 25px;
+    border-radius: 50%;
+}
+main .info-restaurant .info .text{
+    color: #3e3e3e;
+}
+main .info-restaurant .info .text h3{
+    color: #000;
+    font-weight: 700;
+}
+main .info-restaurant .info .text p{
+    font-size: 15px;
 }
 .wrapper-products{
     margin-top: 100px;

@@ -17,6 +17,11 @@ const Allproducts = [
     }
 ];
 
+const iconCart = document.querySelector('.cart')
+const sidebarCart = document.querySelector('.sidebar')
+iconCart.addEventListener('click', function(){
+    sidebarCart.classList.toggle('active');
+})
 const countProducts = document.querySelector('#count-products');
 
 // Função para renderizar a lista de produtos na página
