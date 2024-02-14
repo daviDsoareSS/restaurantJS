@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #3e3e3e;
+    color: #fff;
+}
+.content{
+    max-width: 1260px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 12px;
+}
+
+header{
+    padding: 50px;
+    font-size: 25px;
+    float: right;
+    padding-right: 250px;
+}
+header .cart{
+    position: relative;
+}
+header svg{
+    width: 50px;
+    height: 50px;
+    fill: rgba(55, 148, 255, 0.8);
+}
+header p{
+    top: -10px;
+    right: -10px;
+    position: absolute;
+    background-color: #000;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+header .sidebar{
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+    position: absolute;
+    top: 0px;
+    right: 0;
+    background-color: #fff;
+    width: 200px;
+    height: 100vh;
+}
+header .sidebar .products-in-cart{
+    color: #000;
+    font-size: 15px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding-left: 0;
+    list-style: none;
+    
+}
+header .sidebar .products-in-cart li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .sidebar .products-in-cart li input{
+    width: 50px;
+}
+header .sidebar .products-in-cart svg{
+    cursor: pointer;
+    fill: red;
+    width: 20px;
+    height: 20px;
+}
+main{
+    width: calc(100vw - 200px);
+
+}
+.wrapper-products{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+.wrapper-products .product{
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 500px;
+    height: 300px;
+    color: #000;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+.wrapper-products .product .image{
+    background-color: gray;
+    width: auto;
+    height: 150px;
+    padding: 20px;
+}
+.wrapper-products .product li{
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+    flex-basis: 30%;
+}
+.wrapper-products .product .info input{
+    width: 50px;
+}
+.wrapper-products .product button{
+    cursor: pointer;
+    width: 90%;
+    border-radius: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border: none;
+    background-color: rgb(0, 110, 255);
+    color: #fff;
+    font-weight: bold;
+    height: 35px;
+    margin: 15px 10px;
+    
+}
+.wrapper-products .product button:hover{
+    background-color: rgb(0, 81, 187);
+}
