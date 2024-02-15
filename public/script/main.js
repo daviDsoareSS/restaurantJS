@@ -1,20 +1,40 @@
 const Allproducts = [
     {
         id: 1,
-        name: 'bolacha'
+        name: 'Bolacha trakinas',
+        rate: '5',
+        value: '15,00'
     },
     {
         id: 2,
-        name: 'pão doce'
+        name: 'Pão doce',
+        rate: '5',
+        value: '15,00'
     },
     {
         id: 3,
-        name: 'arroz'
+        name: 'Arroz',
+        rate: '5',
+        value: '15,00'
     },
     {
         id: 4,
-        name: 'salsicha'
-    }
+        name: 'Salsicha',
+        rate: '5',
+        value: '15,00'
+    },
+    {
+        id: 5,
+        name: 'Feijão camil',
+        rate: '5',
+        value: '17,00'
+    },
+    {
+        id: 6,
+        name: 'Carne bovina',
+        rate: '4',
+        value: '13,00'
+    },
 ];
 
 const iconCart = document.querySelector('.cart')
@@ -32,12 +52,27 @@ function renderProducts() {
     Allproducts.forEach(item => {
         contentHTML += `
             <div class="product">
-                <div class="image"></div>
-                <li>${item.name}</li> 
+                <div class="image">
+                    <img src="public/img/1.jpg">
+                </div>
+                <li>${item.name}</li>
+                <span>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    (${item.rate})
+                </span>
                 <div class="info">
-                    <label for="quantity-products">Qtd.</label> 
-                    <input type="number" value="1"> 
-                    <button id="${item.id}">Adicionar</button> 
+                    <label for="quantity-products">
+                        Quantidade
+                    </label> 
+                    <input type="number" value="1">
+                    <div class="footer">
+                        <p>R$${item.value}</p>
+                        <button id="${item.id}">Adicionar</button> 
+                    </div>
                 </div>
             </div>`;
     });

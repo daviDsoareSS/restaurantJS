@@ -54,7 +54,9 @@ header .wrapper-header .left-header ul.links{
     padding-left: 0;
     list-style: none;
     gap: 50px;
-    
+}
+header .wrapper-header .left-header ul.links li{
+    cursor: pointer;
 }
 header .wrapper-header .right-header{
     display: flex;
@@ -126,7 +128,8 @@ main{
     color: var(--roseFont);
     background-color: #fff0e9;
     padding: 20vh 0;
-    height: auto;
+    height: fit-content;
+    position: relative;
 }
 main .wrapper-main {
     display: flex;
@@ -149,6 +152,9 @@ main .wrapper-main .text .wrapper-buttons{
     gap: 30px;
 }
 main .wrapper-main .text .wrapper-buttons button{
+    display: flex;
+    align-items: center;
+    gap: 20px;
     height: 50px;
     border-radius: 40px;
     background-color: var(--roseFont);
@@ -157,6 +163,13 @@ main .wrapper-main .text .wrapper-buttons button{
     font-size: 16.67px;
     font-weight: 700;
     flex-basis: 30%;
+    padding: 8px;
+}
+main .wrapper-main .text .wrapper-buttons button i{
+    background-color: var(--orange);
+    padding: 10px 12px;
+    border-radius: 50%;
+    color: var(--colorFont);
 }
 main .wrapper-main img{
     width: 600px;
@@ -164,11 +177,11 @@ main .wrapper-main img{
     object-fit: contain;
 }
 main .info-restaurant{
-    width: 90vw;
+    width: 1250px;
     transform: translateX(-50%);
     position: absolute;
     left: 50%;
-    bottom: -20vh;
+    bottom: -100px;
     display: flex;
     background-color: #fff;
     -webkit-box-shadow: 0px 0px 20px -11px rgba(0,0,0,0.5);
@@ -177,9 +190,10 @@ main .info-restaurant{
     border-radius: 20px;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 30px;
+    padding: 35px;
 }
 main .info-restaurant .info{
+    flex-basis: 27%;
     display: flex;
     align-items: center;
     gap: 15px;
@@ -187,11 +201,7 @@ main .info-restaurant .info{
 main .info-restaurant .info span{
     background-color: var(--orange);
     color: #000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 120px;
-    height: 70px;
+    padding: 25px;
     font-size: 25px;
     border-radius: 50%;
 }
@@ -200,57 +210,125 @@ main .info-restaurant .info .text{
 }
 main .info-restaurant .info .text h3{
     color: #000;
+    font-size: 25px;
     font-weight: 700;
 }
 main .info-restaurant .info .text p{
     font-size: 15px;
 }
-.wrapper-products{
+section.cardapio {
+    padding-top: 10vh;
+}
+section.cardapio .wrapper-products{
     margin-top: 100px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 50px;
+    gap: 130px;
+    row-gap: 120px;
 }
-.wrapper-products .product{
+section.cardapio .wrapper-products .product{
     position: relative;
-    border-radius: 15px;
-    overflow: hidden;
-    width: 500px;
-    height: 300px;
+    border-radius: 20px;
+    width: 300px;
+    height: auto;
     color: #000;
-    text-align: center;
-    background-color: rgb(255, 255, 255);
-}
-.wrapper-products .product .image{
-    background-color: gray;
-    width: auto;
-    height: 150px;
+    text-align: left;
+    background-color: #f5e6dc;
     padding: 20px;
 }
-.wrapper-products .product li{
-    display: flex;
-    flex-direction: column;
-    font-size: 25px;
-    flex-basis: 30%;
-}
-.wrapper-products .product .info input{
-    width: 50px;
-}
-.wrapper-products .product button{
-    cursor: pointer;
-    width: 90%;
-    border-radius: 20px;
+section.cardapio .wrapper-products .product img{
     position: absolute;
-    bottom: 0;
-    left: 0;
+    display: flex;
+    top: -50px;
+    right: -30px;
+    outline: 20px solid var(--roseFont);
+    object-fit: cover;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+}
+section.cardapio .wrapper-products .product li{
+    margin-top: 210px;
+    font-size: 25px;
+    list-style: none;
+    font-weight: 700;
+}
+section.cardapio .wrapper-products .product span i{
+    color: rgb(253, 173, 53);
+}
+section.cardapio .wrapper-products .product .info{
+    padding: 10px 0;
+    gap: 20px;
+}
+section.cardapio .wrapper-products .product .info label{
+    margin-right: 15px;
+}
+section.cardapio .wrapper-products .product .info input{
     border: none;
-    background-color: rgb(0, 110, 255);
+    background-color: var(--gray);
+    border-radius: 20px;
+    width: 80px;
+    height: 30px;
+    text-align: center;
+}
+section.cardapio .wrapper-products .product .info .footer{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    bottom: 0;
+}
+section.cardapio .wrapper-products .product .info .footer p{
+    font-weight: 700;
+    font-size: 20px;
+}
+section.cardapio .wrapper-products .product .info .footer button{
+    width: 50%;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--roseFont);
     color: #fff;
     font-weight: bold;
-    height: 35px;
-    margin: 15px 10px;
-    
+    margin: 15px 10px;    
 }
-.wrapper-products .product button:hover{
+section.cardapio .wrapper-products .product button:hover{
     background-color: rgb(0, 81, 187);
+}
+section{
+    color: var(--roseFont);
+    padding: 20vh 0 0vh 0;
+}
+section h3#title-section{
+    font-size: 50px;
+}
+section h3#title-section span{
+    color: var(--colorFont);
+}
+section .highlights{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+section .highlights .food {
+    text-align: center;
+}
+section .highlights .food:hover img{
+    transform: scale(0.9);
+}
+section .highlights .food img{
+    width: 350px;
+    height: auto;
+    transition: transform .5s ease-in-out;
+}
+section .highlights .food .text h4{
+    font-size: 25px;
+    color: var(--colorFont);
+    margin-bottom: 10px;
+}
+section .highlights .food .text p{
+    font-size: 16.67px;
 }
