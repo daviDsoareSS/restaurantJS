@@ -32,12 +32,22 @@
                 </div>
             </div>
         </div>
-        <div class="sidebar active">
+        <div class="sidebar">
             <ul class="products-in-cart"></ul>
+            <button class="cart">
+                <i class="fa-solid fa-circle-xmark"></i>
+            </button>
         </div>
     </header>
 
     <main>
+        <div class="modal-product">
+            <div class="modal-content">
+                <p id="closeModal"><i class="fa-solid fa-xmark"></i></p>
+                
+            </div>
+            <div class="overlay"></div>
+        </div>
         <div class="content">
             <div class="wrapper-main">
                 <div class="text">
@@ -48,7 +58,10 @@
                             <i class="fa-solid fa-dollar-sign"></i> 
                             Comprar
                         </button>
-                        <button>Ver mais</button>
+                        <button id="view-more">
+                            <i class="fa-solid fa-info"></i> 
+                            Ver mais
+                        </button>
                     </div>
                 </div>
                 <img src="public/img/food.webp" alt="">
@@ -117,10 +130,63 @@
         <div class="content">
             <h3 id="title-section"><span>Veja</span> nosso cardápio</h3>
             <ul class="wrapper-products"></ul>
-
         </div>
-        
     </section>
+    <section class="section-footer">
+        <div class="content">
+            <div class="banner">
+                <div class="promotion">
+                    <h3>-50%</h3>
+                </div>
+                <div class="text">
+                    <h3>Os melhores lanches da região<br>,<span>peça agora mesmo e seu pedido chegará em minutos...</span></h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="content">
+            <div class="wrapper-footer">
+                <div class="item-link about">
+                    <h3>Restaurant</h3>
+                    <a href="">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit aspernatur in repellendus Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab repellat quos, similique</p>
+                    </a>
+                </div>
+                <div class="item-link pages">
+                    <h3>Explore</h3>
+                    <ul>
+                        <li>
+                            <a href="">About</a>
+                        </li>
+                        <li>
+                            <a href="">Services</a>
+                        </li>
+                        <li>
+                            <a href="">Contact</a>
+                        </li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="item-link socials">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li>
+                            <a href="">+55 (11)95193-3152</a>
+                        </li>
+                        <li>
+                            <a href="">@restaurantJS</a>
+                        </li>
+                        <li>
+                            <a href="">faq@restaurantjs.com.br</a>
+                        </li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 
     <script src="https://kit.fontawesome.com/639efb6961.js" crossorigin="anonymous"></script>
