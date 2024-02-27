@@ -61,8 +61,8 @@ function renderProducts() {
 
     Allproducts.forEach(item => {
         contentHTML += `
-            <div class="product" id="${item.id}">
-                <div class="image">
+            <div class="product">
+                <div class="image" id="${item.id}">
                     <img src="${item.image}">
                 </div>
                 <li>${item.name}</li>
@@ -203,7 +203,7 @@ initializePage();
 
 // MODAL Produtos
 
-const produtos = document.querySelectorAll('.product')
+const produtos = document.querySelectorAll('.product .image')
 const ModalProducts = document.querySelector('.modal-product');
 const overlayModalProducts = document.querySelector('.modal-product .overlay');
 const contentModalProducts = document.querySelector('.modal-product .modal-content');
